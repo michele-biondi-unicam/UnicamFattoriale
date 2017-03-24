@@ -16,20 +16,32 @@ namespace UnicamFattoriale
 
             //Interpreto il testo come un numero intero
             //Attenzione: questa istruzione fallirà se l'utente ha digitato un testo
-            //che non è interpretabile come un numero! (Es. ABCD)
-            int numero = int.Parse(testoDigitatoDallUtente);
+            //che non è interpretabile come un numero o ha digitato un numero troppo grande! (Es. ABCD)
+            try{
+                uint numero = uint.Parse(testoDigitatoDallUtente);
+                uint risultato = 1;
+                uint indice = numero; // Variabile di appoggio per il calcolo del fattoriale
+                //Calcolo il fattoriale
+                while(indice >= 2){
+                    risultato *= indice;
+                    indice--;
+                }
 
-            //Calcolo il fattoriale: qui ci sono degli errori!
-            int risultato = 0;
-            while (numero >= 0) {
-                risultato *= numero;
-                numero--;
+                //Stampo il risultato
+                Console.WriteLine($"Il fattoriale di {numero} e' {risultato}");
+                //Attendo che l'utente prema un tasto prima di uscire, altrimenti 
+                Console.ReadKey();
+            } catch (Exception ex) when (
+                ex is ArgumentNullException ||
+                ex is FormatException ||
+                ex is OverflowException
+            ){
+                Console.WriteLine("Spiacente, non posso calcolare il fattoriale per questo valore.");
             }
 
-            //Stampo il risultato
-            Console.WriteLine($"Il fattoriale di {numero} e' {risultato}");
-            //Attendo che l'utente prema un tasto prima di uscire, altrimenti 
-            Console.ReadKey();
+            Console.ReadLine(); // Permette di visualizzare il messaggio di errore in caso di input sbagliato.
+
+            
         }
     }
 }
