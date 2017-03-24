@@ -9,9 +9,5 @@ Questo programma chiede all'utente di digitare un numero per calcolare il suo [f
  5. Per convenzione, il fattoriale di 0 è 1. Il programma deve gestire questo caso;
  6. *Nice-to-have*: dopo il calcolo, il programma non deve uscire ma chiedere all'utente di inserire un altro numero, finché non inserisce un testo non valido. *Nota: le funzionalità cosiddette "nice-to-have" NON sono essenziali al corretto funzionamento del programma ma migliorano l'esperienza di utilizzo dell'utente.*
 
- ## Email da Bob (il cliente) a proposito del funzionamento attuale del programma
-Ciao,
-senti, ho provato ad usare il programma ma ancora non va bene. Ti segnalo queste difformità dalla specifica che avevamo concordato insieme.
-* Ogni volta che digito un numero, poi sono costretto a riaprire il programma per digitarne un altro ma... vabbé, avevamo detto che questa cosa l'avremmo vista in seguito.
-
-Fammi sapere.
+ ## Stato del programma
+ Funzionante. Sentiti libero di segnalarmi qualche bug o funzionalità aggiuntiva che vorresti avere Bob.
