@@ -12,7 +12,6 @@ Questo programma chiede all'utente di digitare un numero per calcolare il suo [f
  ## Email da Bob (il cliente) a proposito del funzionamento attuale del programma
 Ciao,
 senti, ho provato ad usare il programma ma ancora non va bene. Ti segnalo queste difformità dalla specifica che avevamo concordato insieme.
-* Il punto 1 della specifica chiede di inserire un "numero intero" ma il programma mi dice di inserire un "numero" e basta. Bisognerebbe correggerlo per maggiore chiarezza;
 * Ho degli errori sia digitando un testo a caso che digitando un numero grande;
 * Se digito un numero qualsiasi, il programma mi dice sempre "Il fattoriale di -1 è 0". Che roba è?
 * Ogni volta che digito un numero, poi sono costretto a riaprire il programma per digitarne un altro ma... vabbé, avevamo detto che questa cosa l'avremmo vista in seguito.
