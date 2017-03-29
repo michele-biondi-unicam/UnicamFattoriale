@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Numerics;
 
 namespace UnicamFattoriale
 {
@@ -23,10 +24,7 @@ namespace UnicamFattoriale
                 //che non è interpretabile come un numero o ha digitato un numero troppo grande! (Es. ABCD)
                 try{
                     uint numero = uint.Parse(testoDigitatoDallUtente);
-                    if(numero > 20){
-                        Console.WriteLine("Spiacente, non posso calcolare il fattoriale per questo valore.\n");
-                    } else {
-                        ulong risultato = 1;
+                    BigInteger risultato = 1;
                         uint indice = numero; // Variabile di appoggio per il calcolo del fattoriale
                         //Calcolo il fattoriale
                         while(indice >= 2){
@@ -35,7 +33,7 @@ namespace UnicamFattoriale
                         }
                             
                         Console.WriteLine($"Il fattoriale di {numero} e' {risultato}\n");
-                    }
+                    
                 } catch (Exception ex) when (
                     ex is ArgumentNullException ||
                     ex is FormatException ||
